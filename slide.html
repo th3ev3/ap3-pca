@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="icone.png">
+
+
+</head>
+<body>
+    <section>
+		<div class="container">
+			<header>
+				<a href="#" class="logo">Equipe Macedo</a>
+				<ul>
+					<li><a href="index.html">Inicio</a>
+					<li><a href="equipe.html">Equipe</a>
+					<li><a href="vídeos.html">Passeios</a>
+					<li><a href="dúvidas.html">Dúvidas</a>
+           <li><a href="slide.html" class="active">Fotos</a>
+    
+						
+				</ul>
+			</header>
+			
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="cao2.jpg" style="width:450px">
+                  <div class="text">Cão da raça pastor de Bernese</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="cao1.jpg" style="width:450px">
+                  <div class="text">Cão da raça Dogo argentino</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="cao4.jpg" style="width:400px">
+                  <div class="text">Cão da raça Rottweiler</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="cao3.jpg" style="width:400px">
+                    <div class="text">Cão da raça American bully</div>
+                  </div>
+                  <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="cao5.jpg" style="width:400px">
+                    <div class="text">Cão da raça Basset Hound</div>
+                  </div>
+                  <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="cao6.jpg" style="width:400px">
+                    <div class="text">Cão da raça samoieda</div>
+                  </div>
+                  
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                  <span class="dot" onclick="currentSlide(6)"></span> 
+
+
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+
+</body>
+</html>
