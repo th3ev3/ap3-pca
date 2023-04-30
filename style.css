@@ -181,7 +181,12 @@ header ul li a:hover
 	box-shadow: 0 5px 10px rgba(12, 11, 11, 0.1);
 }
 #btn:hover{
-    background-color:rgb(224, 213, 51);
+    background-color:rgb(243, 243, 237);
+    color: rgb(12, 11, 11);
+}
+
+.btn2:hover{
+	background-color:rgb(74, 38, 88);
     color: rgb(12, 11, 11);
 }
 .container .content
@@ -216,8 +221,8 @@ header ul li a:hover
 .container .content a
 {
 	display: block;
-	padding: 15px 30px;
-	background: #fff;
+	padding: 15px 42px;
+	background: rgb(224, 213, 51);;
 	color: #0f0f0e;
 	margin-top: 20px;
 	border-radius: 30px;
